@@ -75,6 +75,7 @@ namespace Logic
             {
                 if (IsClicked == false) SpellTriggered?.Invoke(this);
                 IsClicked = true;
+                _selectionImage.enabled = false;
                 _clickedImage.enabled = true;
             }
         }
@@ -89,6 +90,7 @@ namespace Logic
         public void OnPointerExit(PointerEventData eventData)
         {
             if (_clickedImage.enabled) return;
+            if(_isCooldown) return;
             _selectionImage.enabled = false;
         }
 
