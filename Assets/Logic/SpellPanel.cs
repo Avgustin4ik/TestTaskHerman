@@ -35,7 +35,6 @@ namespace Logic
         }
 
 
-        //todo заменить на анимацию с твинами
         public void Hide()
         {
             if (spellMutex.Count > 0) OnSpellsQueue(spellMutex);
